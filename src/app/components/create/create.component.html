@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-card>
+    <mat-card-title>Create Post</mat-card-title>
+    <mat-card-content class="flex flex-column">
+      <app-input type="text" label="Title" formControlName="title"></app-input>
+      <app-input type="block" label="Content" formControlName="content"></app-input>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Send</button>
+      <button mat-raised-button type="button" (click)="onClear()">Clear</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
